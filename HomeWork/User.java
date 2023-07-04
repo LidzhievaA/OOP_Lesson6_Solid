@@ -1,4 +1,4 @@
-public class User{
+public class User implements Save{
 	private String name;
 	
 	public User(String name){
@@ -9,6 +9,7 @@ public class User{
 		return name;
 	}
 	
+	@Override
 	public void save(){
 		Persister persister = new Persister(this);
 		persister.save();
